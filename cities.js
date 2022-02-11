@@ -12,11 +12,9 @@ function averagePopulation(data) {
 }
 
 function biggestAndSmallest(data) {
-  const biggest = _.max(data, function (city) { return city.population; });
-  const smallest = _.min(data, function (city) { return city.population; });
-  const big = biggest.name;
-  const small = smallest.name;
-  return `Biggest: ${big}; Smallest:${small}`;
+  const biggest = _.max(data, function (entry) { return entry.population; }).name;
+  const smallest = _.min(data, function (city) { return city.population; }).name;
+  return `Biggest:${biggest}; Smallest:${smallest}`;
 }
 
 console.log(averagePopulation(cities));
